@@ -1,0 +1,19 @@
+class Solution {
+    public boolean solution(int x) {
+        boolean answer = true;
+        
+        int[] array = {x, 0};
+        int sum = 0;
+        
+        while(x > 0){
+            array[1] += x%10;
+            x /= 10;
+        }
+        
+        if(array[0]%array[1] != 0){
+            answer = false;
+        }
+        
+        return answer;
+    }
+}
