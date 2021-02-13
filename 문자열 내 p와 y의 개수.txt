@@ -1,0 +1,43 @@
+1.
+class Solution {
+    boolean solution(String str) {
+        boolean answer = true;
+        int psum = 0;
+        int ysum = 0;
+        for (int i = 0; i < str.length(); i++) {
+            if ((str.charAt(i) == 80) || (str.charAt(i) == 112)) {
+                psum++;
+            } else if ((str.charAt(i) == 89) || (str.charAt(i) == 121)) {
+                ysum++;
+            }
+        }
+        if (psum == ysum) {
+            answer = true;
+        }else if (psum != ysum) {
+            answer = false;
+        }else {
+            return answer;
+        }
+        return answer;
+    }
+}
+
+
+
+
+2.
+class Solution {
+    boolean solution(String s) {
+        boolean answer = true;
+
+        s = s.toLowerCase();
+        answer = s.chars().filter(factor -> 'p'==factor).count() == s.chars().filter(factor -> 'y'==factor).count();
+
+        return answer;
+    }
+}
+
+
+
+
+
