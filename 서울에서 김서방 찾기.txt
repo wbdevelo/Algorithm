@@ -1,0 +1,33 @@
+1.
+class Solution {
+    public String solution(String[] seoul) {
+        String answer = "";
+
+        for(int i=0; i<seoul.length; i++){
+            answer += seoul[i].equals("Kim") ? "김서방은 "+i+"에 있다" : "";
+        }
+
+        return answer;
+    }
+}
+
+
+
+
+2.
+import java.util.*;
+
+class Solution {
+    public String solution(String[] seoul) {
+        String answer = "";
+        ArrayList<String> list = new ArrayList<String>();
+        
+        for(String data : seoul){
+            list.add(data);
+        }
+        
+        answer = "김서방은 "+list.indexOf("Kim")+"에 있다";
+        
+        return answer;
+    }
+}
