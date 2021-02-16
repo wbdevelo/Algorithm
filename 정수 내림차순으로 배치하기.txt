@@ -1,0 +1,23 @@
+import java.util.*;
+
+class Solution {
+    public long solution(long n) {
+        long answer = 0;
+        String n_str = Long.toString(n);
+        ArrayList<Character> list = new ArrayList<Character>();
+        
+        for(int i=0; i<n_str.length(); i++){
+            list.add(n_str.charAt(i));
+        }
+        
+        Collections.sort(list, Collections.reverseOrder());
+        n_str = "";
+        for(char data : list){
+            n_str += data;
+        }
+        
+        answer = Long.parseLong(n_str);
+        
+        return answer;
+    }
+}
