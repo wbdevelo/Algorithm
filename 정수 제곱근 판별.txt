@@ -1,0 +1,12 @@
+class Solution {
+    public long solution(long n) {
+        long answer = 0;
+        double result = Math.sqrt(n);
+        String res = Double.toString(result);
+        String[] ress = res.split("\\.");
+        
+        answer = ress[1].equals("0") ? (long)Math.pow(Integer.parseInt(ress[0])+1, 2) : -1;
+        
+        return answer;
+    }
+}
